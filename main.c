@@ -2,16 +2,14 @@
 
 int main()
 {
-    int time;
-    int minute, second;
+    int year;
 
-    printf("input the second : ");
-    scanf("%d", &time);
+    printf("input the year : ");
+    scanf("%d", &year);
 
-    minute = time / 60;
-    second = time % 60;
-
-    printf("the time is %d : %d\n", minute, second);
+    printf("Is the year %d a leap year? : %d\n", year, ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0));
 
     return 0;
+
 }
+        
