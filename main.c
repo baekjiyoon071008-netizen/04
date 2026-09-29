@@ -1,23 +1,17 @@
 #include <stdio.h>
 
-int main(int argc, char *argv[])
-{
-    unsigned int x;
-    int b = 0;
+int main(void) {
+    int total_seconds;
+    int hours, minutes, seconds;
 
-    printf("input a number : ");
-    scanf("%u", &x);
+    printf("Input the second : ");
+    scanf("%d", &total_seconds);
 
-    for (; x != 0; x >>= 1)
-    {
-        if (x & 1)
-        {
-            b++;
-        }
-    }
+    hours = total_seconds / 3600;
+    minutes = (total_seconds % 3600) / 60;
+    seconds = total_seconds % 60;
 
-    printf("The result is : %d\n", b);
+    printf("The time for %d second is %d : %d : %d\n", total_seconds, hours, minutes, seconds);
 
     return 0;
 }
-        
